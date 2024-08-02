@@ -1,0 +1,32 @@
+[project]
+name = "duckpie"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Michael Booth", email = "michael@databooth.com.au"},
+]
+dependencies = [
+    "duckdb>=1.0.0",
+    "pandas>=2.2.2",
+    "loguru>=0.7.2",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "Apache License 2.0"}
+
+
+[project.optional-dependencies]
+notebook = [
+    "notebook>=7.2.1",
+]
+[tool.pdm]
+distribution = false
+
+[tool.pdm.dev-dependencies]
+fast = [
+    "fastcore>=1.6.1",
+    "fastlite>=0.0.7",
+]
+lint = [
+    "black[jupyter]>=24.4.2",
+]
